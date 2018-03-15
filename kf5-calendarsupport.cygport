@@ -1,0 +1,26 @@
+inherit kf5
+
+NAME="kf5-calendarsupport"
+VERSION=17.12.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE calendar support library"
+DESCRIPTION="Calendar Support library provides helper utilities for calendaring
+applications."
+
+PKG_NAMES="libKF5CalendarSupport5 libKF5CalendarSupport-devel"
+libKF5CalendarSupport5_CONTENTS="
+	etc/xdg/calendarsupport.*categories
+	usr/bin/cygKF5CalendarSupport-5.dll
+	usr/share/doc/${NAME}
+	usr/share/kservicetypes5/calendarplugin.desktop
+	usr/share/locale/*/LC_MESSAGES/calendarsupport.mo
+"
+libKF5CalendarSupport_devel_REQUIRES="libKF5Mime-devel libKF5IdentityManagement-devel libKF5AkonadiCalendar-devel libQt5Gui-devel"
+libKF5CalendarSupport_devel_CONTENTS="
+	usr/include/KF5/[Cc]alendar[Ss]upport/
+	usr/include/KF5/calendarsupport_version.h
+	usr/lib/cmake/KF5CalendarSupport/
+	usr/lib/libKF5CalendarSupport.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_CalendarSupport.pri
+"
